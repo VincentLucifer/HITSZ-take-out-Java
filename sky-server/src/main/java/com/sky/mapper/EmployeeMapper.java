@@ -23,7 +23,7 @@ public interface EmployeeMapper {
      * 插入员工数据
      * @param employee
      */
-    @Insert("INSERT INTO employee (name, username, password, phone, sex, id_number, create_time, update_time, create_user, update_user, status) " +
+    @Insert("INSERT INTO empl yee (name, username, password, phone, sex, id_number, create_time, update_time, create_user, update_user, status) " +
             "VALUES " +
             "(#{name}, #{username}, #{password}, #{phone}, #{sex}, #{idNumber}, #{createTime}, #{updateTime}, #{createUser}, #{updateUser}, #{status})")
     void insert(Employee employee);
@@ -33,6 +33,18 @@ public interface EmployeeMapper {
      * @param employeePageQueryDTO
      * @return
      */
-
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 根据id启用禁用员工
+     * @param employee
+     */
+    void update(Employee employee);
+
+    /**
+     * 根据id查询员工
+     * @param id
+     * @return
+     */
+    Employee getById(Long id);
 }
