@@ -26,3 +26,7 @@ sky:
     we-chat-pay-cert-file-path:
     notify-url:
     refund-notify-url:
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: 2DPgjJTffWC7OB6gAJBkvhgogEjorLpb
